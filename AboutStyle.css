@@ -1,0 +1,113 @@
+	#about {
+    position: relative;
+    z-index: 2;
+    background-color: #080707;
+    min-height: 100vh;
+	}
+	
+	#about .about-container{
+		display: flex;
+		min-height: 100vh;
+		padding: 0.5%;
+		padding-top: 1%;
+		align-items: flex-start;
+	}
+	
+	#about .about-section{
+		position: relative;
+		width: 50%;
+		padding-left: 14%;
+		padding-top: 2%;
+	}
+	
+	
+	#about .about-section::before {
+		content: "About";
+		position: absolute;
+		top: 28%;
+		left: 25%;
+		
+		font-family: "Arial Black", "Impact", sans-serif;
+		font-weight: 900;
+		font-size: 8vw;
+		font-weight: 900;
+		color: rgba(255, 255, 255, 0.07);
+		line-height: 0.8;
+		letter-spacing: 2px;
+		
+		z-index: 0;
+		pointer-events: none;
+	}
+	
+	#about .about-content {
+		position: relative;
+		z-index: 1;
+		margin-top: 10%;
+	}
+	
+	#about .main-heading {
+		font-size: 3.6vw;
+		letter-spacing: 0.01px;
+		font-weight: 900;
+		margin-top: 10%;
+		color: white;
+	}
+	
+	#about .intro-text {
+		color: #777777;
+		margin-top: 2.6%;
+		margin-bottom: 3.3%;
+		font-size: 1.1vw;
+	}
+	
+	#about .info-list {
+		font-size: 1.4vw;
+		list-style: none;
+		position: relative;
+	}
+	
+	#about .info-list li{
+		display: grid;
+		grid-template-columns: 190px 1fr; 
+		margin-bottom: 3%;
+		align-items: center;
+	}
+	
+	#about .info-list .label {
+		font-weight: 600;
+		color: white;
+	}
+	
+	#about .info-list .value {
+		color: #777777;
+		font-weight: 400;
+	}
+	/*
+	.btn-download {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #FFBD39;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+}*/
+
+	#about .MyPhoto {
+		position: relative;
+		
+		height: auto;
+		width: 50%;
+
+		
+		z-index: -1;
+	}
+	
+	#about .MyPhoto img{
+		width: 95%;
+		display: block;
+	}

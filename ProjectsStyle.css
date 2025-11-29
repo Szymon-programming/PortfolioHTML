@@ -1,0 +1,6 @@
+	#projects {
+		position: relative;
+		z-index: 5;
+		background-color: #080707;
+		min-height: 100vh;
+	}

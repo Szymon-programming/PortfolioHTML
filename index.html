@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="MainCss.css">
+	
+	<link rel="stylesheet" href="AboutStyle.css">
+	<link rel="stylesheet" href="HomeStyle.css">
+	<link rel="stylesheet" href="ResumeStyle.css">
+	<link rel="stylesheet" href="SkillsStyle.css">
+	<link rel="stylesheet" href="ProjectsStyle.css">
+	
+	
+    <title>Szymon Choiński - Web Developer Portfolio</title>
+	
+</head>
+
+<body>
+
+	<nav class="navbar">
+		<div class="MyName">SZYMON</div>
+			<div class="nav-links">
+				<a href="#home">Home</a>
+				<a href="#about">About</a>
+				<a href="#resume">Resume</a>
+				<a href="#skills">Skills</a>
+				<a href="#projects">Projects</a>
+			</div>
+    </nav>
+
+	<!-- Home -->
+	
+	<section id="home" class="page-section">
+		<div class="home-container">
+				<div class="welcome">
+				<div class="intro">HELLO!</div>
+				<span class="TransparentHome">Home</span>
+				<div class="name-line">I'm <span class="gold">Szymon<br>Choiński</span></div>
+				<div class="subtitle">Fullstack Web Developer</div>
+				</div>
+	
+				<div class="MyPhoto">
+				<img src="C:\Users\choin\Desktop\Html_nauka\ZdjeciePortfolio.png" alt="Szymon Choiński">
+				</div>
+		</div>
+	
+	</section>
+
+	<!-- about -->
+
+	<section id="about" class="page-section">
+		<div class="about-container">
+			<div class="MyPhoto">
+			<img src="C:\Users\choin\Desktop\Html_nauka\ZdjeciePortfolio.png" alt="Szymon Choiński">
+		</div>
+
+	
+		<section class="about-section">
+			<div class="container">
+				<div class="about-content">
+					<h2 class="main-heading">About Me</h2>
+					<p class="intro-text">I am a Computer Science student and a Web Developer.</p>
+
+						<ul class="info-list">
+							<li><span class="label">Name:</span> <span class="value">Szymon Choinski</span></li>
+							<li><span class="label">Date of birth:</span> <span class="value">26.08.2005</span></li>
+							<li><span class="label">Address:</span> <span class="value">Marki</span></li>
+							<li><span class="label">Zip code:</span> <span class="value">05-270</span></li>
+							<li><span class="label">Email:</span> <span class="value">choinskiszymon123@gmail.com</span></li>
+							<li><span class="label">Phone:</span> <span class="value">+48-518-279-123</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	
+	<!-- Resume -->
+	
+	<section id="resume" class="page-section">
+	
+	<!-- Skills -->
+	
+	<section id="skills" class="page-section">
+	
+	<!-- Projects -->
+	
+	<section id="projects" class="page-section">
+
+<script>
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navbar .nav-links a');
+
+    // Opcje: Zamiast jednej linii, obserwujemy "środkowy pas" ekranu
+    const options = {
+        root: null,
+        // To sprawia, że obszar wykrywania to środek ekranu (z marginesem błędu)
+        // Dzięki temu link nie gaśnie tak łatwo w przerwach
+        rootMargin: '-40% 0px -40% 0px', 
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // 1. Pobieramy ID sekcji, która weszła w środek ekranu
+                const id = entry.target.getAttribute('id');
+                
+                // 2. Jeśli mamy ID, to podświetlamy (ZABEZPIECZENIE)
+                if (id) {
+                    // Usuwamy active ze wszystkich
+                    navLinks.forEach(link => link.classList.remove('active'));
+
+                    // Dodajemy active do odpowiedniego linku
+                    const activeLink = document.querySelector(`.navbar .nav-links a[href="#${id}"]`);
+                    if (activeLink) {
+                        activeLink.classList.add('active');
+                    }
+                }
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+	html {
+		scroll-behavior: smooth;
+	}
+
+	.page-section {
+		min-height: 100vh;
+		padding-top: 80px;
+    
+		display: flex;
+		justify-content: center; 
+		align-items: center;
+		position: relative;
+	}
+	
+	
+	body {
+	  background: #080707;
+	  margin: 0;
+	}
+	
+	.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+	  font-family: Luminari;
+      font-size: 1.3vw;
+      color: white;
+	  margin-right: 40px;
+	  z-index: 9999;
+    }
+	
+	.MyName {
+      font-weight: 1000;
+      font-size: 1.6vw;
+      color: white;
+	  font-family: sans-serif;
+	  flex: 1;
+	  margin-left: 1.5vw;
+	  font-variant: small-caps;
+	  font-stretch: ultra-condensed;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+      -ms-user-select: none;    
+      user-select: none;        
+    }
+	
+	.nav-links a {
+      gap: 2rem;
+	  color: white;
+	  text-decoration: none;
+	  font-size: 1.2vw;
+	  margin-right: 40px;
+	  position: relative;
+	  transition: width 0.3s ease;
+    }
+	
+	.nav-links {
+      flex: 0.5;
+      gap: 2rem;
+	  color: white;
+	  text-decoration: none;
+	  font-size: 1vw;
+    }
+	
+	.navbar .nav-links a:link,
+    .navbar .nav-links a:visited {
+		color: white;
+	}
+	
+	.navbar .nav-links a:hover {
+		color: #d19e45;
+	}
+	
+	.navbar .nav-links a::after {
+	 content: "";
+	 position: absolute;
+	 left: 50%;
+	 bottom: -6px;
+	 transform: translateX(-50%);
+	 width: 0%;
+	 height: 2px;
+	 background-color: #d19e45;
+	 transition: width 0.3s ease;
+	}
+	
+    .navbar .nav-links a.active {
+      color: #d19e45 !important;
+	}
+	
+	.navbar .nav-links a.active::after {
+     width: 100%;
+	}

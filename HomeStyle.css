@@ -1,0 +1,83 @@
+	#home {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+	z-index: 1;
+}
+	#home .home-container{
+		display: flex;
+		min-height: 100vh;
+		padding: 0.5%;
+		padding-top: 4%;
+		align-items: flex-start;
+	}
+	
+	
+	#home .welcome {
+	  position: absolute;
+	  top: 30%;
+	  margin-left: -45vw;
+	}
+	
+	#home .intro {
+	  font-size: 1.9vw;
+	  color: #d19e45;
+	  font-weight: 1000;
+	  font-family: Luminari;
+	  font-stretch: expanded;
+	  font-variant: small-caps;
+	  letter-spacing: 3px;
+	}
+	
+	#home .TransparentHome {
+	  position: absolute;
+      top: 18%;
+	  left: 28%;
+	  transform: translate(-50%, -50%);
+	  font-size: 11vw;
+	  font-weight: 800;
+	  color: rgba(255, 255, 255, 0.07);
+	  letter-spacing: 2px;
+	  margin-left: 5vw;
+	  pointer-events: none;
+	}
+	
+	#home .name-line {
+      font-size: 6.5vw;
+	  margin-top: 0.5rem;
+	  font-weight: 1000;
+	  font-family: Poppins;
+	  color: white;
+    }
+	
+	#home .name-line span.gold {
+	  color: #d19e45;
+	}
+	
+	#home .subtitle {
+	  margin-left: 2vw;
+      font-size: 1.6vw;
+	  font-weight: 1000;
+      color: white;
+      margin-top: 2rem;
+	  letter-spacing: 1px;
+      transform: scaleX(1.1);
+      display: inline-block;
+    }
+	
+	#home .MyPhoto {
+		position: absolute;
+
+		margin-left: 6%;
+		
+		height: auto;
+		width: 40vw;
+
+		z-index: -1;
+	}
+	
+	#home .MyPhoto img{
+		width: 100%;
+		display: block;
+	}
